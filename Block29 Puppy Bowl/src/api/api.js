@@ -22,6 +22,7 @@ export const puppyApi = createApi({
                 body: JSON.stringify({
                     name: initialPost.name,
                     breed: initialPost.breed,
+                    imageUrl: initialPost.url
                     })
             })  
         }),

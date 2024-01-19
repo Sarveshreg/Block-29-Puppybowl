@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { useParams } from 'react-router-dom';
 import {useGetPuppyByIdQuery} from "../../api/api"
+import Playercard from '../playercard/Playercard';
 
 function Players() {
     let {id}=useParams();
@@ -16,7 +17,7 @@ function Players() {
             <>Oh no, there was an error</>
         ) : isLoading ? (
             <>Loading...</>
-        ) :  <>data is here!...</>}
+        ) :  <Playercard {...pupInfo}/>}
     </>
 
     )

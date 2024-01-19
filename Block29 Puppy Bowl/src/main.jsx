@@ -7,6 +7,7 @@ import { Provider } from 'react-redux'
 import {Route, RouterProvider, createBrowserRouter, createRoutesFromElements} from "react-router-dom"
 import Layout from './Layout.jsx'
 import Players from './components/players/Players.jsx'
+import Search from './components/search/Search.jsx'
 
 
 let router=createBrowserRouter(
@@ -14,6 +15,7 @@ let router=createBrowserRouter(
     <Route path="/" element={<Layout/>}>
       <Route path="" element={<App/>}/>
       <Route path="/players/:id" element={<Players/>}/>
+      <Route path="/search/:name" element={<Search/>}/>
     </Route>
   )
 )
