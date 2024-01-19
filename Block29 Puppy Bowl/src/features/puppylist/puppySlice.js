@@ -2,6 +2,7 @@ import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
     list: null,
+    searchText:null
     }
 
 
@@ -9,13 +10,16 @@ const initialState = {
         name: "puppy",
         initialState,
         reducers: {
-            addPlayer:(state,action)=>{
-                state.push(action.payload)
+            addToState:(state,action)=>{
+                state.list=action.payload;
+            },
+            addSearchTextToState:(state,action)=>{
+                state.searchText=action.payload;
             }
         }
     })
 
 
-    export const {addPlayer} =puppySlice.actions
+    export const {addToState, addSearchTextToState} =puppySlice.actions
 
     export default puppySlice.reducer
